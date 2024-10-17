@@ -1,0 +1,21 @@
+Encoding: UTF-8
+Package: knapsack
+Type: Package
+Title: Solve the Knapsack Problem Using Various Algorithms
+Version: 1.0
+Date: 2024-10-14
+Author: Quanlin Ren <renqu711@student.liu.se>, Qinxia Zhang <qinzh916@student.liu.se>
+Maintainer: Quanlin Ren <renqu711@student.liu.se>
+Description: Provides solutions to the knapsack problem using dynamic programming, brute force, and greedy heuristic approaches. The package includes functions to calculate the maximum value that can be carried in a knapsack given the weight limit and the value/weight of the items. It also allows for performance profiling of the implemented algorithms.
+License: GPL-3
+RoxygenNote: 7.3.2
+Depends: R (>= 3.5.0)
+Imports: parallel
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+
+
+

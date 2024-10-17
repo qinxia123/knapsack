@@ -1,0 +1,88 @@
+---
+title: "Introduction to knapsack Package"
+author: "Quanlin Ren, Qinxia Zhang"
+date: "2024-10-17"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+vignette: >
+  %\VignetteIndexEntry{Introduction to knapsack Package} 
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Overview
+
+The `knapsack` package provides various algorithms to solve the knapsack problem, including dynamic programming, brute-force search, and greedy heuristic algorithms. Users can employ these methods to analyze different scenarios of the knapsack problem and find the optimal combination of items that yield the maximum value. This document will introduce how to use the package and demonstrate its capabilities.
+
+# Installing and Loading the Package
+
+Ensure you have the package installed and loaded:
+
+devtools::install_github("Quanlin222/knapsack")  
+library(knapsack)
+
+# Solving the Knapsack Problem with Different Algorithms
+
+## Brute-force Algorithm
+
+This function solves the knapsack problem using brute-force search.
+
+It optionally parallelizes the brute-force search if the argument parallel is set to TRUE.
+
+Question How much time does it takes to run the algorithm for n = 16 objects?
+
+Answer :
+
+(1)parallel = TURE
+
+user  system elapsed 
+
+  0.298   0.276   0.177
+  
+(2)parallel = FALSE
+
+user  system elapsed 
+
+  0.171   0.006   0.178
+
+## Dynamic Programming Algorithm
+
+This function solves the knapsack problem using dynamic programming.
+
+It constructs a table to store the maximum value for each weight capacity.
+
+The result is obtained by iterating over all items and weights.
+
+Question How much time does it takes to run the algorithm for n = 500 objects?
+
+Answer:
+
+user  system elapsed 
+
+  0.566   0.000   0.569
+
+## Greedy Algorithm
+
+This function solves the knapsack problem using a greedy approach.
+
+It selects items based on their value-to-weight ratio until the capacity is full.
+
+Question How much time does it takes to run the algorithm for n = 1000000 objects?
+
+Answer:
+
+user  system elapsed 
+
+  0.074   0.006   0.080
+
+
+# Conclusion
+
+The greedy algorithm could be the fastest solution of the three.
+
+By trying to improve our code with parallelization, we could gain faster performance.
+
+
+
